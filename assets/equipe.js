@@ -1,6 +1,6 @@
 // Equipe. Para ativar o LinkedIn de alguém, cole o link entre as aspas.
 const EQUIPE = [
-  { nome: 'Vinicius Kozonoe Guaglini', papel: 'Líder', linkedin: '' },
+  { nome: 'Vinicius Kozonoe Guaglini', papel: '', linkedin: '' },
   { nome: 'João Victor Melo Santos', papel: '', linkedin: '' },
   { nome: 'Yan Lucas Gonçalves da Silva', papel: '', linkedin: '' },
   { nome: 'Murilo Jeronimo Ferreira Nunes', papel: '', linkedin: '' },

@@ -21,6 +21,7 @@
   </a>
   <nav aria-label="Seções">
     <a href="#problema">O problema</a>
+    <a href="#plataforma">A plataforma</a>
     <a href="#stepscan">StepScan</a>
     <a href="#demo">Demo</a>
     <a href="#equipe">Equipe</a>
@@ -34,7 +35,7 @@
     <h1 class="hero-nome"><span>Passo</span><span>Certo</span></h1>
     <canvas id="degrau" aria-label="Degrau de escada rolante em 3D. Arraste para girar." role="img"></canvas>
     <div class="hero-base">
-      <p class="hero-frase">Medimos o degrau da escada rolante antes que ele pare a estação.</p>
+      <p class="hero-frase">Mostramos onde a manutenção das escadas rolantes gasta sem retorno, e medimos o degrau antes que ele pare a estação.</p>
       <div class="hero-acoes">
         <a class="botao" href="/prototipo/">Abrir o protótipo</a>
         <a class="botao botao-linha" href="#demo">Ver a demo de 40 s</a>
@@ -54,6 +55,23 @@
     </div>
   </section>
 
+  <section class="plataforma" id="plataforma">
+    <div class="largura">
+      <div class="plataforma-cabeca">
+        <h2>O histórico de manutenção já mostra onde está o dinheiro.</h2>
+        <p>A Passo Certo é, antes de tudo, uma plataforma que lê o histórico real do SAP das escadas da Linha 4 e aponta onde a manutenção gasta horas e material sem resolver o problema. O StepScan entra onde o histórico não enxerga: o degrau.</p>
+      </div>
+      <ul class="numeros">
+        <li><strong>~25 mil h/ano</strong><p>de preventiva por calendário, quase metade de todas as horas de manutenção (2024–25). A plataforma mostra quais preventivas não encontram nada e podem ser espaçadas.</p></li>
+        <li><strong>14 dias</strong><p>é a mediana para a mesma escada voltar a falhar, num recorte de 18 escadas. A plataforma mostra quais escadas e peças se repetem, para atacar a causa uma vez.</p></li>
+        <li><strong>47%</strong><p>das ações nas notas de falha (tipo Z1) são “resetado e testado”: o técnico vai, reseta e volta. A plataforma mostra onde isso se repete.</p></li>
+        <li><strong>R$ 0,8 a 1,2 mi/ano</strong><p>em material, com o corrimão como item mais caro (2024–25). A plataforma liga cada peça trocada ao histórico da escada.</p></li>
+      </ul>
+      <p class="plataforma-nota">Números do histórico SAP real da Motiva. O ganho em reais de cada ação será calculado com o custo-hora da Motiva.</p>
+      <p class="plataforma-proxima">Próxima sprint: rodar a plataforma sobre o histórico real (“e se a Motiva usasse a Passo Certo desde 2024?”) e mostrar, com os dados deles, quanto teria sido evitado.</p>
+    </div>
+  </section>
+
   <section class="stepscan" id="stepscan">
     <div class="largura">
       <div class="stepscan-cabeca">
@@ -63,10 +81,10 @@
       <div class="stepscan-grade">
         <figure class="stepscan-fotos">
           <div class="foto-par">
-            <img src="/assets/img/braco-baixo.jpg" alt="Modelo 3D do StepScan com o braço inclinado: a roda está num degrau mais baixo" loading="lazy" width="1600" height="720">
-            <img src="/assets/img/braco-alto.jpg" alt="Modelo 3D do StepScan com o braço levantado: a roda está num degrau na altura certa" loading="lazy" width="1600" height="720">
+            <img src="/assets/img/degrau-normal.jpg" alt="Roda do StepScan sobre um degrau na altura normal" loading="lazy" width="1600" height="755">
+            <img src="/assets/img/degrau-gasto.jpg" alt="Roda do StepScan descendo sobre o degrau 41, mais baixo por causa do rolete gasto" loading="lazy" width="1600" height="755">
           </div>
-          <figcaption>Degrau mais baixo, o braço desce. Degrau na altura certa, o braço sobe.</figcaption>
+          <figcaption>Degrau normal, o braço fica na altura de sempre. Degrau com rolete gasto, o braço desce.</figcaption>
         </figure>
         <ol class="passos">
           <li><h3>Encaixa no patamar</h3><p>Com a escada bloqueada, a base fica no piso de entrada, presa por ímãs. Nada é desmontado.</p></li>
@@ -74,6 +92,17 @@
           <li><h3>O ângulo vira milímetro</h3><p>Um sensor lê quanto o braço subiu ou desceu e converte em altura, com resolução de 0,1 mm.</p></li>
           <li><h3>A plataforma avisa</h3><p>Cada degrau é comparado com os vizinhos e com a visita anterior. O que começou a afundar vira alerta, com tempo de programar a troca.</p></li>
         </ol>
+      </div>
+      <figure class="stepscan-rolete">
+        <img src="/assets/img/rolete-gasto.jpg" alt="Vista por baixo do degrau: rolete gasto, menor que o normal, faz o degrau assentar mais baixo no trilho" loading="lazy" width="1600" height="720">
+        <figcaption>Por baixo do degrau: o rolete gasto é menor, então o degrau assenta mais baixo no trilho. O StepScan percebe isso de fora, sem abrir a escada.</figcaption>
+      </figure>
+      <div class="stepscan-video">
+        <h3>O StepScan na prática</h3>
+        <video controls preload="metadata" playsinline poster="/assets/video/stepscan-poster.jpg" width="1280" height="720">
+          <source src="/assets/video/stepscan-na-pratica.mp4" type="video/mp4">
+        </video>
+        <p>Da escada bloqueada até o degrau virar ordem de troca no sistema. As medidas são da visita simulada do protótipo, ancorada em notas reais de manutenção; a descida do degrau está exagerada na imagem.</p>
       </div>
     </div>
   </section>
