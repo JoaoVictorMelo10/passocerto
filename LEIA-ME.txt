@@ -1,0 +1,24 @@
+SITE PASSO CERTO — como colocar no ar no Vercel
+
+O endereço precisa ser exatamente https://passocerto.vercel.app,
+porque é o link gravado no QR do marcador. Confira isso ANTES de imprimir.
+
+Caminho mais fácil (GitHub + Vercel):
+1. No GitHub, crie um repositório (ex.: passo-certo-site) e suba o conteúdo
+   desta pasta (index.html, assets/, prototipo/, vercel.json) na raiz.
+2. Em vercel.com: Add New > Project > importe o repositório.
+3. Em "Project Name", escreva: passocerto
+   Framework Preset: Other. Não precisa de build. Clique em Deploy.
+4. Abra https://passocerto.vercel.app no celular, fora do Wi-Fi da FIAP.
+   Se o Vercel tiver dado outro nome (ex.: passocerto-abc123), o nome
+   "passocerto" já estava ocupado: me avise antes de imprimir, porque o QR
+   precisa ser refeito com o link novo.
+
+Alternativa pelo terminal: dentro desta pasta, rode  npx vercel  e,
+quando perguntar o nome do projeto, responda passocerto. Depois  npx vercel --prod
+
+Editar depois:
+- LinkedIn da equipe: assets/equipe.js (cole o link entre as aspas).
+- Textos: index.html.
+- Protótipo: prototipo/index.html (é o mesmo HTML do MVP).
+Toda alteração enviada ao GitHub publica sozinha, e o link não muda.

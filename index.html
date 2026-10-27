@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Passo Certo</title>
+<meta name="description" content="Passo Certo: medimos o degrau da escada rolante antes que ele pare a estação. Challenge FIAP e Motiva, Linha 4-Amarela.">
+<meta property="og:title" content="Passo Certo">
+<meta property="og:description" content="Medimos o degrau da escada rolante antes que ele pare a estação.">
+<meta property="og:image" content="/assets/img/og.jpg">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="topo">
+  <a class="marca" href="#inicio" aria-label="Passo Certo, voltar ao início">
+    <img src="/assets/img/logo.svg" alt="" width="34" height="26"><span>Passo Certo</span>
+  </a>
+  <nav aria-label="Seções">
+    <a href="#problema">O problema</a>
+    <a href="#stepscan">StepScan</a>
+    <a href="#demo">Demo</a>
+    <a href="#equipe">Equipe</a>
+  </nav>
+  <a class="botao botao-pequeno" href="/prototipo/">Abrir o protótipo</a>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-trilho" aria-hidden="true"></div>
+    <h1 class="hero-nome"><span>Passo</span><span>Certo</span></h1>
+    <canvas id="degrau" aria-label="Degrau de escada rolante em 3D. Arraste para girar." role="img"></canvas>
+    <div class="hero-base">
+      <p class="hero-frase">Medimos o degrau da escada rolante antes que ele pare a estação.</p>
+      <div class="hero-acoes">
+        <a class="botao" href="/prototipo/">Abrir o protótipo</a>
+        <a class="botao botao-linha" href="#demo">Ver a demo de 40 s</a>
+      </div>
+      <p class="hero-nota">Challenge FIAP e Motiva, Linha 4-Amarela do metrô de São Paulo</p>
+    </div>
+    <p class="hero-dica" aria-hidden="true">arraste o degrau</p>
+  </section>
+
+  <section class="problema" id="problema">
+    <div class="largura">
+      <h2>A peça que mais para a escada é a que ninguém mede.</h2>
+      <div class="problema-texto">
+        <p>No histórico de manutenção da Linha 4, o rolete do degrau é o componente com mais registros de falha. Quase sempre, a nota termina em troca da peça.</p>
+        <p>Os sensores que se costuma propor olham para motor, óleo, corrente e velocidade. Nenhum olha para o degrau. Quando o rolete gasta, o degrau desce aos poucos, até a própria escada se desligar por segurança. A estação fica sem aquela escada até alguém trocar a peça.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stepscan" id="stepscan">
+    <div class="largura">
+      <div class="stepscan-cabeca">
+        <h2>StepScan</h2>
+        <p>Uma régua portátil que mede a altura de cada degrau, por fora da escada, sem abrir nada.</p>
+      </div>
+      <div class="stepscan-grade">
+        <figure class="stepscan-fotos">
+          <div class="foto-par">
+            <img src="/assets/img/braco-baixo.jpg" alt="Modelo 3D do StepScan com o braço inclinado: a roda está num degrau mais baixo" loading="lazy" width="1600" height="720">
+            <img src="/assets/img/braco-alto.jpg" alt="Modelo 3D do StepScan com o braço levantado: a roda está num degrau na altura certa" loading="lazy" width="1600" height="720">
+          </div>
+          <figcaption>Degrau mais baixo, o braço desce. Degrau na altura certa, o braço sobe.</figcaption>
+        </figure>
+        <ol class="passos">
+          <li><h3>Encaixa no patamar</h3><p>Com a escada bloqueada, a base fica no piso de entrada, presa por ímãs. Nada é desmontado.</p></li>
+          <li><h3>A escada dá uma volta</h3><p>A roda do braço encosta na linha do rolete e passa por todos os degraus, um por um.</p></li>
+          <li><h3>O ângulo vira milímetro</h3><p>Um sensor lê quanto o braço subiu ou desceu e converte em altura, com resolução de 0,1 mm.</p></li>
+          <li><h3>A plataforma avisa</h3><p>Cada degrau é comparado com os vizinhos e com a visita anterior. O que começou a afundar vira alerta, com tempo de programar a troca.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo" id="demo">
+    <div class="largura">
+      <h2>O protótipo em 40 segundos</h2>
+      <video controls preload="metadata" playsinline poster="/assets/video/demo-poster.jpg" width="1280" height="720">
+        <source src="/assets/video/demo-40s.mp4" type="video/mp4">
+      </video>
+      <div class="demo-rodape">
+        <p>Entre como engenharia, supervisão ou técnico e siga o caso da escada PIN-ER22, em Pinheiros. As notas de manutenção são reais; as medidas do StepScan são simuladas sobre elas.</p>
+        <a class="botao" href="/prototipo/">Abrir o protótipo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="equipe" id="equipe">
+    <div class="largura">
+      <h2>Equipe</h2>
+      <ul class="pessoas" id="pessoas"></ul>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="largura">
+    <img src="/assets/img/logo.svg" alt="" width="46" height="35">
+    <p>Passo Certo, Engenharia de Software FIAP<br>Challenge Motiva 2026</p>
+  </div>
+</footer>
+
+<script src="/assets/equipe.js"></script>
+<script type="module" src="/assets/degrau.js"></script>
+</body>
+</html>
